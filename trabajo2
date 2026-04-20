@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class trabajo2 : MonoBehaviour
+{
+    public bool tieneLlave = false;
+    public bool espacioDisponible = true; 
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            bool puedeAbrir = tieneLlave && espacioDisponible;
+
+            if (puedeAbrir)
+            {
+                Debug.Log("cofre abierto");
+            }
+            else
+
+            {
+                Debug.Log("no puedes abrir el cofre");
+            }
+        }  
+
+
+
+    }
+}
