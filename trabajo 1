@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class Trabajo1 : MonoBehaviour
+{
+    public int energiaActual = 100;
+    public int costoHabilidad = 30;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        int energiaRestante = energiaActual - costoHabilidad;
+
+        Debug.Log("Energía restante: " + energiaRestante);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
