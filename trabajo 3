@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class trabajo3 : MonoBehaviour
+{
+    //variables punblicas
+    public int vidaActual = 50;
+    public int dañoRecibido = 0;
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        //SIMULACIÓN:PRECIONA ESPACIO PARA RECIBIR DAÑO
+        {
+            //RESTAR DAÑO
+            vidaActual -= dañoRecibido;
+
+            //Evaluar estado de vida
+            if (vidaActual > 30)
+            {
+                Debug.Log(" jugador estable");
+            }
+            else if (vidaActual >= 1 && vidaActual <=30)
+            {
+                Debug.Log("jugador en peligro");
+            }
+            else if (vidaActual <= 0)
+            {
+                Debug.Log("Game Over");
+            }
+        }
+    }
+}
